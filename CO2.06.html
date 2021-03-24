@@ -1,0 +1,90 @@
+<html>
+<head>
+<style>
+h1{
+text-align: center;
+}
+div
+{
+margin: auto;
+ width=60%;
+</style>
+<script>
+function getRes()
+{
+var mark=0;
+if(document.getElementById('q1b').checked)
+mark=mark+1;
+if(document.getElementById('q2c').checked)
+mark=mark+1;
+if(document.getElementById('q3b').checked)
+mark=mark+1;
+if(document.getElementById('q4a').checked)
+mark=mark+1;
+if(document.getElementById('q5a').checked)
+mark=mark+1
+if(document.getElementById('q6b').checked)
+mark=mark+1;
+
+document.getElementById('result').style.border="red";
+document.getElementById('result').innerHTML="<h2><U>RESULT</U></H2><H4>MARKS===>"+mark
+}
+</script>
+</head>
+<body><H1>ONLINE QUIZ</H1>
+<div id='quiz'>
+<label>1.What is the most popular category of portable PCs?</label><br>
+<input type="radio" id="q1a" name="q1" value="q1a">
+<label for="comp">Notebook</label><br>
+<input type="radio" id="q1b" name="q1" value="q1b">
+<label for="comp">	 Laptop</label><br>
+<input type="radio" id="q1c" name="q1" value="q1c">
+<label for="comp">palmtop</label><br>
+
+<label>2.Which keyboard normally is used with portable PCs?</label><br>
+<input type="radio" id="q2a" name="q2" value="q2a">
+<label for="comp">AT</label><br>
+<input type="radio" id="q2b" name="q2" value="q2b">
+<label for="comp">	 XT</label><br>
+<input type="radio" id="q2c" name="q2" value="q2c">
+<label for="comp">Enhanced</label><br>
+
+
+<label>3.Which of the following is high-voltage equipment?</label><br>
+<input type="radio" id="q3a" name="q3" value="q3a">
+<label for="comp">Printers</label><br>
+<input type="radio" id="q3b" name="q3" value="q3b">
+<label for="comp">	CRTs</label><br>
+<input type="radio" id="q3c" name="q3" value="q3c">
+<label for="comp">harddrive</label><br>
+
+
+<label>4.The Operating System is a:</label><br>
+<input type="radio" id="q4a" name="q4" value="q4a">
+<label for="comp">System software</label><br>
+<input type="radio" id="q4b" name="q4" value="q4b">
+<label for="comp">	Application Software</label><br>
+<input type="radio" id="q4c" name="q4" value="q4c">
+<label for="comp">utility software</label><br>
+
+
+<label>5.The special formatting language used to create Web Pages is called:</label><br>
+<input type="radio" id="q5a" name="q5" value="q5a">
+<label for="comp">HTML</label><br>
+<input type="radio" id="q5b" name="q5" value="q5b">
+<label for="comp">	JAVA</label><br>
+<input type="radio" id="q5c" name="q5" value="q5c">
+<label for="comp">COBOL</label><br>
+
+<label>6. The first electronic digital computer was built in the:</label><br>
+<input type="radio" id="q6a" name="q6" value="q6a">
+<label for="comp">1920’s</label><br>
+<input type="radio" id="q6b" name="q6" value="q6b">
+<label for="comp">	1940’s</label><br>
+<input type="radio" id="q6c" name="q6" value="q6c">
+<label for="comp">1970’s</label><br>
+</div>
+<center><button id="submit" onclick="getRes()">SUBMIT</button><br><br></center>
+<div id='result'>
+</body>
+</html>
