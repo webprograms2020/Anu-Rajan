@@ -1,0 +1,70 @@
+<html>
+<head>
+
+<script>
+function genCalendar()
+{
+var year=prompt('Please enter your year');
+if (year==null)
+year=2021;
+var month=prompt('Please enter your month');
+if (month==null)
+month=0;
+var days=(new Date(year,month,0)).getDate();
+//alert("Number of Days-"+days);
+var wdays=(new Date(year,month-1,1)).getDay();
+//alert("Number of Days-"+wdays);
+document.body.innerHTML=' ';
+document.write("<center>");
+document.write("<h1>CALENDER ("+year+" -"+month+")</h1>");
+document.write("<table width ='400px' border='1' align='center'>");
+document.write("<thead>");
+document.write("<tr bgcolor=' red' align='center'>");
+document.write("<td width='50px'>Sun</td>");
+document.write("<td width='50px'>Mon</td>");
+document.write("<td width='50px'>Tue</td>");
+document.write("<td width='50px'>Wed</td>");
+document.write("<td width='50px'>Thu</td>");
+document.write("<td width='50px'>Fri</td>");
+document.write("<td width='50px'>Sat</td>");
+document.write("</tr>");
+document.write("</thead>");
+var i;
+document.write("<tr align='center'>");
+for(i=0;i<wdays;i++)
+{
+document.write("<td width='50px'></td>");
+}
+var d;
+for(d=1;d<=days;d++)
+{
+document.write("<td width='50px'>"+d+"</td>");
+if(i==6)
+{
+document.write("</tr>");
+document.write("<tr align='center'>");
+i=0;
+}
+else
+{
+
+i=i+1;
+}
+}
+for(;i<7;i++)
+{
+document.write("<td width='50px'></td>");
+}
+
+document.write("</tr></table><br>");
+document.write("<button onclick='genCalendar()'> Read year and month </button>");
+document.write("</center>");
+}
+</script>
+</head>
+<body>
+<CENTER>
+<button onclick="genCalendar()"> Read year and month </button>
+</CENTER>
+</body>
+</html>
